@@ -3,8 +3,8 @@ import { FC } from "react";
 
 const FooterElement: FC = () => {
   return (
-    <footer className="bg-gray-100 text-gray-500 text-sm flex justify-between py-5 px-14 absolute bottom-0 w-full">
-      <div className="flex gap-9">
+    <footer className="text-xs bg-gray-100 text-gray-500 md:text-sm flex justify-between py-5 px-14 md:absolute md:bottom-0 w-full mt-20">
+      <div className="flex gap-3 md:gap-9">
         <Link href="#">About</Link>
         <Link href="#">Privacy</Link>
         <Link href="#">Terms</Link>
