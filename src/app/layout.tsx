@@ -1,4 +1,5 @@
 import FooterElement from "@/components/FooterElement";
+import NavBar from "@/components/NavBar";
 import "@/styles/global.css";
 
 export const metadata = {
