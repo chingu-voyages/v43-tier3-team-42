@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 interface Headline2Props {
   children: ReactNode;
-  className: string;
+  className?: string;
 }
 
 export default function Headline2({ children, className }: Headline2Props) {
