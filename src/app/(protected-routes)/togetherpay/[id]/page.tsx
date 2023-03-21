@@ -10,7 +10,6 @@ interface PageProps {
 
 const Page: FC<PageProps> = ({ params }) => {
   const displayData = expenses.map((expense) => {
-    console.dir(expense);
     return (
       <ExpenseDetail
         key={expense.id}
