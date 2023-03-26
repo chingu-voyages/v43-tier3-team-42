@@ -15,7 +15,7 @@ const ExpenseSummary: FC<ExpenseSummaryProps> = ({ id, name, total }) => {
 
   return (
     <Link
-      href="#"
+      href={`/togetherpay/${id}`}
       className="w-11/12 md:max-w-xl bg-navy-600 text-navy-50 inline-flex justify-between py-5 px-9 rounded-xl"
     >
       <span className="capitalize">{name}</span>
