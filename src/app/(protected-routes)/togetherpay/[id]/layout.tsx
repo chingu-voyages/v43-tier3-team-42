@@ -9,8 +9,8 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <>
-      <div className="md:mt-16 md:h-1/2 bg-navy-800 text-navy-50 flex flex-col justify-center items-center">
+    <div className="bg-navy-50 h-screen">
+      <div className="md:mt-16 bg-navy-800 text-navy-50 flex flex-col justify-center items-center">
         <Headline2 className="text-navy-50 pt-10 uppercase tracking-widest">
           california trip
         </Headline2>
@@ -28,7 +28,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         </Button>
       </div>
       {children}
-    </>
+    </div>
   );
 };
 

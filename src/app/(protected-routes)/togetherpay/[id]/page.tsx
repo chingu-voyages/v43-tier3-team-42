@@ -1,7 +1,7 @@
 import { Search } from "lucide-react";
 import Link from "next/link";
 import { FC } from "react";
-import * as expenses from "@/lib/expenses.json";
+import expenses from "@/lib/expenses";
 import ExpenseDetail from "@/components/ExpenseDetail";
 
 interface PageProps {
@@ -10,7 +10,6 @@ interface PageProps {
 
 const Page: FC<PageProps> = ({ params }) => {
   const displayData = expenses.map((expense) => {
-    console.dir(expense);
     return (
       <ExpenseDetail
         key={expense.id}
@@ -33,7 +32,7 @@ const Page: FC<PageProps> = ({ params }) => {
           <Link href={`/togetherpay/${params.id}/recent`}>Recent activity</Link>
         </div>
       </div>
-      <div className="bg-navy-50 w-full h-1/2 px-4 flex flex-col items-center gap-7 justify-center">
+      <div className="bg-navy-50 w-full px-4 flex flex-col items-center gap-7 justify-center">
         <div className="mt-5 text-navy-200 w-full md:w-4/12 border-b-2 border-navy-200 pb-1 flex items-center gap-3">
           <Search className="w-4 h-4" />
           <input

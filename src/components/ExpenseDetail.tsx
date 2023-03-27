@@ -16,7 +16,6 @@ const ExpenseDetail: FC<ExpenseDetailProps> = ({
   description,
   date,
 }) => {
-  console.log(type);
   return (
     <div className="bg-white text-black w-full rounded capitalize py-5 px-3 md:px-6 flex items-start justify-between">
       <div>

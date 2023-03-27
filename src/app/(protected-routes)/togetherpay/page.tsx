@@ -1,6 +1,6 @@
 import ExpenseSummary from "@/components/ExpenseSummary";
 import { FC } from "react";
-import * as groups from "@/lib/groups.json";
+import groups from "@/lib/groups";
 import Link from "next/link";
 import { Plus } from "lucide-react";
 
