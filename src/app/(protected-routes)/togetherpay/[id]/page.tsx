@@ -1,7 +1,7 @@
 import { Search } from "lucide-react";
 import Link from "next/link";
 import { FC } from "react";
-import * as expenses from "@/lib/expenses.json";
+import expenses from "@/lib/expenses";
 import ExpenseDetail from "@/components/ExpenseDetail";
 
 interface PageProps {
