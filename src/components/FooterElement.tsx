@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 const FooterElement: FC = () => {
   return (
-    <footer className="text-xs bg-gray-100 text-gray-500 md:text-sm flex justify-between py-5 px-14 md:absolute md:bottom-0 w-full mt-20">
+    <footer className="mt-20 flex w-full justify-between bg-gray-100 py-5 px-14 text-xs text-gray-500 md:absolute md:bottom-0 md:text-sm">
       <div className="flex gap-3 md:gap-9">
         <Link href="#">About</Link>
         <Link href="#">Privacy</Link>
