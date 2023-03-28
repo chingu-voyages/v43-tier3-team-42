@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 "use client";
 import Button from "@/components/ui/Button";
 import Headline4 from "@/components/ui/headlines/Headline4";
@@ -34,8 +35,8 @@ const Login: FC = () => {
       toast.error("Invalid credentials");
     } catch (error) {
       if (error instanceof z.ZodError) {
-        for (let issue in error.issues) {
-          toast.error(error.issues[issue].message);
+        for (const issue of error.issues) {
+          toast.error(issue.message);
         }
       }
     }
