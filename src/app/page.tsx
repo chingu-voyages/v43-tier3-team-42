@@ -2,6 +2,11 @@ import Headline1 from "@/components/ui/headlines/Headline1";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Together Pay",
+  description: "Create a group to track expenses together",
+};
+
 export default function Home() {
   return (
     <main className="bg-white">
