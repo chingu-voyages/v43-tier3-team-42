@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { cva, VariantProps } from "class-variance-authority";
-import { ButtonHTMLAttributes, forwardRef } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { type ButtonHTMLAttributes, forwardRef } from "react";
 
 export const buttonVariants = cva(
   "active:scale-95 inline-flex items-center justify-center rounded-full text-sm text-white uppercase font-semibold tracking-wider",

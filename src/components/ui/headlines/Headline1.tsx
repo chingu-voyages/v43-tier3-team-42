@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface Headin1Props {
   children: ReactNode;
@@ -10,7 +10,7 @@ function Headline1({ children, className }: Headin1Props) {
   return (
     <h1
       className={cn([
-        "text-black text-4xl font-semibold md:text-5xl",
+        "text-4xl font-semibold text-black md:text-5xl",
         className,
       ])}
     >

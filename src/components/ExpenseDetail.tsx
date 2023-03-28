@@ -1,4 +1,4 @@
-import { FC } from "react";
+import type { FC } from "react";
 import Headline5 from "./ui/headlines/Headline5";
 
 interface ExpenseDetailProps {
@@ -17,7 +17,7 @@ const ExpenseDetail: FC<ExpenseDetailProps> = ({
   date,
 }) => {
   return (
-    <div className="bg-white text-black w-full rounded capitalize py-5 px-3 md:px-6 flex items-start justify-between">
+    <div className="flex w-full items-start justify-between rounded bg-white py-5 px-3 capitalize text-black md:px-6">
       <div>
         <Headline5>{type}</Headline5>
         <p className="text-sm">
@@ -25,7 +25,7 @@ const ExpenseDetail: FC<ExpenseDetailProps> = ({
         </p>
       </div>
       <div className="flex flex-col items-end">
-        <p className="text-brand-700 font-semibold">
+        <p className="font-semibold text-brand-700">
           {Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",

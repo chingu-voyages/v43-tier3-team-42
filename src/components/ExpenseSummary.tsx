@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 interface ExpenseSummaryProps {
   id: string;
@@ -16,7 +16,7 @@ const ExpenseSummary: FC<ExpenseSummaryProps> = ({ id, name, total }) => {
   return (
     <Link
       href={`/togetherpay/${id}`}
-      className="w-11/12 md:max-w-xl bg-navy-600 text-navy-50 inline-flex justify-between py-5 px-9 rounded-xl"
+      className="inline-flex w-11/12 justify-between rounded-xl bg-navy-600 py-5 px-9 text-navy-50 md:max-w-xl"
     >
       <span className="capitalize">{name}</span>
       <span className={totalSpanClassName}>{total === 0 ? "PAID" : total}</span>
