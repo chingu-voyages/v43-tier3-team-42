@@ -7,14 +7,12 @@ import { Plus } from "lucide-react";
 const TogetherPay: FC = () => {
   const displayGroups = groups.map((group) => {
     return (
-      <>
-        <ExpenseSummary
-          key={group.id}
-          name={group.name}
-          total={group.total}
-          id={group.id}
-        />
-      </>
+      <ExpenseSummary
+        key={group.id}
+        name={group.name}
+        total={group.total}
+        id={group.id}
+      />
     );
   });
 
