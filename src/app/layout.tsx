@@ -1,11 +1,11 @@
+"use client";
 import FooterElement from "@/components/FooterElement";
 import NavBar from "@/components/NavBar";
 import "@/styles/global.css";
+import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
-export const metadata = {
-  title: "Together Pay",
-  description: "Create a group to track expenses together",
-};
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -14,7 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
+        <Toaster />
         <NavBar />
         {children}
         <FooterElement />

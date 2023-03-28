@@ -1,7 +1,7 @@
 import Button from "@/components/ui/Button";
 import Headline2 from "@/components/ui/headlines/Headline2";
 import { Plus } from "lucide-react";
-import { FC, ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,9 +9,9 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <>
-      <div className="md:mt-16 md:h-1/2 bg-navy-800 text-navy-50 flex flex-col justify-center items-center">
-        <Headline2 className="text-navy-50 pt-10 uppercase tracking-widest">
+    <div className="h-screen bg-navy-50">
+      <div className="flex flex-col items-center justify-center bg-navy-800 text-navy-50 md:mt-16">
+        <Headline2 className="pt-10 uppercase tracking-widest text-navy-50">
           california trip
         </Headline2>
         <p className="mt-6 text-base">
@@ -28,7 +28,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         </Button>
       </div>
       {children}
-    </>
+    </div>
   );
 };
 

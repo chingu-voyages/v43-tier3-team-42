@@ -1,37 +1,33 @@
 import ExpenseSummary from "@/components/ExpenseSummary";
-import { FC } from "react";
-import * as groups from "@/lib/groups.json";
+import type { FC } from "react";
+import groups from "@/lib/groups";
 import Link from "next/link";
 import { Plus } from "lucide-react";
 
-interface TogetherPayProps {}
-
-const TogetherPay: FC<TogetherPayProps> = ({}) => {
+const TogetherPay: FC = () => {
   const displayGroups = groups.map((group) => {
     return (
-      <>
-        <ExpenseSummary
-          key={group.id}
-          name={group.name}
-          total={group.total}
-          id={group.id}
-        />
-      </>
+      <ExpenseSummary
+        key={group.id}
+        name={group.name}
+        total={group.total}
+        id={group.id}
+      />
     );
   });
 
   return (
-    <div className="md:mt-20 flex flex-col gap-3 md:gap-5 justify-center items-center">
+    <div className="flex flex-col items-center justify-center gap-3 md:mt-20 md:gap-5">
       <Link
         href="#"
-        className="w-11/12 md:max-w-xl bg-white text-navy-900 border-navy-900 border-2 inline-flex gap-3 items-center justify-center uppercase py-5 px-9 rounded-xl"
+        className="inline-flex w-11/12 items-center justify-center gap-3 rounded-xl border-2 border-navy-900 bg-white py-5 px-9 uppercase text-navy-900 md:max-w-xl"
       >
         <Plus className="h-4 w-4" /> <span>create new group</span>
       </Link>
       {displayGroups}
       <Link
         href="#"
-        className="bg-brand-700 text-brand-50 font-semibold inline-flex gap-3 items-center justify-center uppercase py-2 px-4 rounded-full mt-7"
+        className="mt-7 inline-flex items-center justify-center gap-3 rounded-full bg-brand-700 py-2 px-4 font-semibold uppercase text-brand-50"
       >
         <Plus className="h-4 w-4" /> <span>new expense</span>
       </Link>

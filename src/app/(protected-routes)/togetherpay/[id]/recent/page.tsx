@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 interface PageProps {
   params: { id: string };
@@ -8,8 +8,8 @@ interface PageProps {
 const Page: FC<PageProps> = ({ params }) => {
   return (
     <>
-      <div className="bg-navy-800 text-navy-50 flex flex-col justify-center items-center">
-        <div className="mt-6 gap-4 text-xs md:text-base md:w-2/6 py-1 flex items-start justify-between">
+      <div className="flex flex-col items-center justify-center bg-navy-800 text-navy-50">
+        <div className="mt-6 flex items-start justify-between gap-4 py-1 text-xs md:w-2/6 md:text-base">
           <Link href={`/togetherpay/${params.id}`}>Transactions</Link>
           <Link href={`/togetherpay/${params.id}/debt`}>Debt</Link>
           <Link href={`/togetherpay/${params.id}/members`}>Members</Link>
