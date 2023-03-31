@@ -34,7 +34,7 @@ const Group: FC = () => {
   };
 
   return (
-    <div className="flex w-screen flex-col items-center justify-center gap-3 md:mt-20 md:gap-5 md:px-52">
+    <div className="mx-auto flex flex-col items-center justify-center gap-3 p-5 md:mt-20 md:w-3/6 md:gap-5">
       <Headline4>Create a new group</Headline4>
       <div className="w-full">
         <form onSubmit={handleSubmit(onSubmit)}>
