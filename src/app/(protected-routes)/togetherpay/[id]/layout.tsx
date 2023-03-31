@@ -23,9 +23,14 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <p className="text-base text-brand-700">
           Total due: <strong>$57.21</strong>
         </p>
-        <Button className="mt-6">
-          <Plus className="h-4 w-4" /> new expense
-        </Button>
+        <div className="mt-6 flex gap-5 md:gap-11">
+          <Button>
+            <Plus className="h-4 w-4" /> new expense
+          </Button>
+          <Button variant={"dark"}>
+            <Plus className="h-4 w-4" /> new payment
+          </Button>
+        </div>
       </div>
       {children}
     </div>
