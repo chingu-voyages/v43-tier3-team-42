@@ -10,7 +10,7 @@ const TogetherPay: FC = () => {
       <ExpenseSummary
         key={group.id}
         name={group.name}
-        total={group.total}
+        total={group.totalSpent}
         id={group.id}
       />
     );
@@ -19,7 +19,7 @@ const TogetherPay: FC = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-3 md:mt-20 md:gap-5">
       <Link
-        href="#"
+        href="/togetherpay/group"
         className="inline-flex w-11/12 items-center justify-center gap-3 rounded-xl border-2 border-navy-900 bg-white py-5 px-9 uppercase text-navy-900 md:max-w-xl"
       >
         <Plus className="h-4 w-4" /> <span>create new group</span>

@@ -2,17 +2,17 @@ const groups = [
   {
     name: "california trip",
     id: "ab123-234-234-12312",
-    total: -57.21,
+    totalSpent: -57.21,
   },
   {
     name: "apt roommates",
     id: "ab123-234-234-12313",
-    total: 0,
+    totalSpent: 0,
   },
   {
     name: "coworkers",
     id: "ab123-234-234-12314",
-    total: 71.36,
+    totalSpent: 71.36,
   },
 ];
 
