@@ -39,7 +39,7 @@ const Modal: FC<ModalProps> = (props) => {
   };
 
   return (
-    <div className="flex h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden p-4 md:fixed md:inset-0 md:h-full md:w-full">
+    <div className="flex h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden p-4 md:fixed md:inset-0">
       <div className="relative h-full w-full max-w-md md:h-auto">
         <div className="relative rounded-lg bg-white py-3 shadow">
           <div className="flex items-center justify-between">

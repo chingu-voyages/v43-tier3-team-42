@@ -1,9 +1,15 @@
 const members = [
   {
     id: 1,
-    name: "Andres Court",
+    name: "Andres",
     phone: "12345678",
-    email: "test@test.com",
+    email: "andres@test.com",
+  },
+  {
+    id: 2,
+    name: "Grace",
+    phone: "23456789",
+    email: "grace@test.com",
   },
 ];
 

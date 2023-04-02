@@ -23,7 +23,7 @@ const Page: FC<PageProps> = ({ params }) => {
           <Link href={`/togetherpay/${params.id}/recent`}>Recent activity</Link>
         </div>
       </div>
-      <div className="mx-auto mt-6 flex flex-col gap-4 px-5 text-xs md:w-3/6 md:text-sm">
+      <div className="mx-auto mt-6 flex flex-col gap-4 px-5 text-xs md:w-2/6 md:text-sm">
         <AddMember />
         <p>Members ({members.length})</p>
         {membersDisplay}
