@@ -9,6 +9,7 @@ export const buttonVariants = cva(
       variant: {
         default: "bg-amber-500 hover:bg-amber-300",
         dark: "bg-neutral-900 hover:bg-neutral-700",
+        green: "bg-green-700 hover:bg-green-500",
       },
       size: {
         default: "py-2 px-4",
