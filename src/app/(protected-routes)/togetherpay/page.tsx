@@ -26,7 +26,7 @@ const TogetherPay: FC = () => {
       </Link>
       {displayGroups}
       <Link
-        href="#"
+        href="/togetherpay/expense"
         className="mt-7 inline-flex items-center justify-center gap-3 rounded-full bg-brand-700 py-2 px-4 font-semibold uppercase text-brand-50"
       >
         <Plus className="h-4 w-4" /> <span>new expense</span>

@@ -9,20 +9,20 @@ import { type SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { z } from "zod";
 
-const newGroup = z.object({
-  name: z.string().min(1, { message: "Group is required" }),
+const newExpense = z.object({
+  name: z.string().min(1, { message: "Expense is required" }),
   currency: z.string(),
 });
 
-type Groups = z.infer<typeof newGroup>;
+type Expenses = z.infer<typeof newExpense>;
 
-const Group: FC = () => {
-  const { register, handleSubmit } = useForm<Groups>();
+const Expense: FC = () => {
+  const { register, handleSubmit } = useForm<Expenses>();
   const router = useRouter();
 
-  const onSubmit: SubmitHandler<Groups> = (data) => {
+  const onSubmit: SubmitHandler<Expenses> = (data) => {
     try {
-      newGroup.parse(data);
+      newExpense.parse(data);
       router.replace("togetherpay/new/members");
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -35,13 +35,13 @@ const Group: FC = () => {
 
   return (
     <div className="mx-auto flex flex-col items-center justify-center gap-3 p-5 md:mt-20 md:w-3/6 md:gap-5">
-      <Headline4>Create a new group</Headline4>
+      <Headline4>Create a new expense</Headline4>
       <div className="w-full">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <label className="block">Group name</label>
+          <label className="block">Expense name</label>
           <input
             {...register("name")}
-            placeholder="Enter group name"
+            placeholder="Enter expense name"
             className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 focus:border-slate-200 focus:outline-none"
           />
           <label className="block">Please select your currency</label>
@@ -65,4 +65,4 @@ const Group: FC = () => {
   );
 };
 
-export default Group;
+export default Expense;
