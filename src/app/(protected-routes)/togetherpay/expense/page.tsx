@@ -10,8 +10,8 @@ import { toast } from "react-hot-toast";
 import { z } from "zod";
 
 const newExpense = z.object({
-  name: z.string().min(1, { message: "Expense is required" }),
-  currency: z.string(),
+  // name: z.string().min(1, { message: "Expense is required" }),
+  // currency: z.string(),
 });
 
 type Expenses = z.infer<typeof newExpense>;
@@ -38,22 +38,21 @@ const Expense: FC = () => {
       <Headline4>Create a new expense</Headline4>
       <div className="w-full">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <label className="block">Expense name</label>
+
+          <label className="block">Expense Amount</label>
           <input
-            {...register("name")}
+            // {...register("name")}
             placeholder="Enter expense name"
             className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 focus:border-slate-200 focus:outline-none"
           />
-          <label className="block">Please select your currency</label>
-          <select
-            {...register("currency")}
-            className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 text-navy-100 focus:border-slate-200 focus:outline-none"
-          >
-            <option value={"USD"}>United States Dollar (USD)</option>
-            <option value={"CAN"}>Canadian Dollar (CAN)</option>
-            <option value={"MXP"}>Mexican Peso (MXP)</option>
-            <option value={"CLP"}>Chlean Peso (CLP)</option>
-          </select>
+
+          <label className="block">Expense name</label>
+          <input
+            // {...register("name")}
+            placeholder="Enter expense name"
+            className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 focus:border-slate-200 focus:outline-none"
+          />
+
           <div className="flex justify-end">
             <Button variant={"dark"} className="px-10">
               Done &nbsp; <Check className="h-4 w-4" />
