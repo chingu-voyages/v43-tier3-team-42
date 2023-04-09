@@ -10,8 +10,9 @@ import { toast } from "react-hot-toast";
 import { z } from "zod";
 
 const newExpense = z.object({
-  // name: z.string().min(1, { message: "Expense is required" }),
-  // currency: z.string(),
+  total: z.number().min(1, { message: "Expense amount is required" }),
+  title: z.string().min(1, { message: "Expense title is required" }),
+  date: z.date().min(new Date(2020, 0, 1)).max(new Date()),
 });
 
 type Expenses = z.infer<typeof newExpense>;
@@ -41,21 +42,21 @@ const Expense: FC = () => {
 
           <label className="block">Expense Amount</label>
           <input
-            // {...register("name")}
+            {...register("total")}
             placeholder="0.00"
             className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 focus:border-slate-200 focus:outline-none"
           />
 
           <label className="block">Title</label>
           <input
-            // {...register("name")}
+            {...register("title")}
             placeholder="Enter expense title"
             className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 focus:border-slate-200 focus:outline-none"
           />
 
           <label className="block">Date of Purchase</label>
           <input
-            // {...register("name")}
+            {...register("date")}
             placeholder="mm/dd/yyyy"
             className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 focus:border-slate-200 focus:outline-none"
           />
