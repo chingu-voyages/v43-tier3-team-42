@@ -42,14 +42,28 @@ const Expense: FC = () => {
           <label className="block">Expense Amount</label>
           <input
             // {...register("name")}
-            placeholder="Enter expense name"
+            placeholder="0.00"
             className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 focus:border-slate-200 focus:outline-none"
           />
 
-          <label className="block">Expense name</label>
+          <label className="block">Title</label>
           <input
             // {...register("name")}
-            placeholder="Enter expense name"
+            placeholder="Enter expense title"
+            className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 focus:border-slate-200 focus:outline-none"
+          />
+
+          <label className="block">Date of Purchase</label>
+          <input
+            // {...register("name")}
+            placeholder="mm/dd/yyyy"
+            className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 focus:border-slate-200 focus:outline-none"
+          />
+
+          <label className="block">Paid by:</label>
+          <input
+            // {...register("name")}
+            placeholder="Full Name"
             className="mb-5 block w-full rounded-md border border-navy-100 px-10 py-2 focus:border-slate-200 focus:outline-none"
           />
 
